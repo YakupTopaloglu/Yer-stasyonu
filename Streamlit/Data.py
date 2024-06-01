@@ -8,6 +8,8 @@ from openpyxl import Workbook,load_workbook
 def connectMyPlane():
     parser = argparse.ArgumentParser(description='commands')
     parser.add_argument('--connect', default='tcp:127.0.0.1:5762')
+    #raspberry haberleşmesi
+    #parser.add_argument('--connect', default='/dev/ttyACM0')
     args = parser.parse_args()
     connection_string = args.connect
     baud_rate = 57600
